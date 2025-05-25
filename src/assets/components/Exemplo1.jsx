@@ -4,8 +4,8 @@ export function Exemplo1 () {
     const [numero, setNumero] = useState(0)
 
     useEffect(() =>{
-        alert("Seja bem-vindo!")
-    }, [])
+        console.log(`O estado do botão agora é: ${numero}`)
+    }, [numero])
 
     return(
         <section>
