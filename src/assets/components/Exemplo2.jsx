@@ -12,7 +12,7 @@ export function Exemplo2(){
     useEffect( () => {
         if (cep.length === 8){
             axios.get(`https://viacep.com.br/ws/${cep}/json/`).then((response) => {
-                setLogradouro(responde.data.logradouro)
+                setLogradouro(response.data.logradouro)
                 setBairro(response.data.bairro)
                 setLocalidade(response.data.localidade)
                 setEstado(response.data.estado)
@@ -31,13 +31,16 @@ export function Exemplo2(){
                 <h3>Seu endereço:</h3>
 
             {cep.length === 8 && (
+                <>
+                <h3>Seu endereço: </h3>
                 <ul>
                     <li>Rua: {logradouro}</li>
                     <li>Bairro: {bairro}</li>
                     <li>Cidade: {localidade}</li>
                     <li>Estado:{estado}</li>
                     <li>UF: {uf}</li>
-                </ul>
+                    </ul>
+                </>
             )}
 
             </div>
