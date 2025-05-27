@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Header } from './assets/components/Header'
-import { Exemplo1 } from './assets/components/exemplo1'
+import { Exemplo1 } from './assets/components/Exemplo1'
 import { Exemplo2 } from './assets/components/Exemplo2'
 
 export function App() {
